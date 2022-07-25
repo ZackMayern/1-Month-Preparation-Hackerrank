@@ -1,3 +1,7 @@
+# Another sorting method, the counting sort, does not require comparison. Instead, you create an integer array whose index range covers the entire range of values in your array 
+# to sort. Each time a value occurs in the original array, you increment the counter at that index. At the end, run through your counting array, printing the value of each 
+# non-zero valued index that number of times.
+
 #!/bin/python3
 
 import math
@@ -13,10 +17,10 @@ from collections import Counter
 # The function accepts INTEGER_ARRAY arr as parameter.
 #
 
-def countingSort(arr,n):
+def countingSort(arr):
     # Write your code here
     a = Counter(arr)
-    return(a[i] for i in range(n))
+    return(a[i] for i in range(100))
     
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
@@ -25,7 +29,7 @@ if __name__ == '__main__':
 
     arr = list(map(int, input().rstrip().split()))
 
-    result = countingSort(arr,n)
+    result = countingSort(arr)
 
     fptr.write(' '.join(map(str, result)))
     fptr.write('\n')
