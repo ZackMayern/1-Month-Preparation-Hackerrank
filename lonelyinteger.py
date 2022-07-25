@@ -1,3 +1,5 @@
+# Given an array of integers, where all elements but one occur twice, find the unique element.
+
 #!/bin/python3
 
 import math
